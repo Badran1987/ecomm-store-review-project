@@ -1,1 +1,232 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
+h1 {
+    font-family: adonis-web;
+    font-weight: 400;
+    font-size:  2rem;
+    padding-bottom: 20px;
+    line-height: 2rem;
+    text-align: center;
+    font-style: normal;
+    text-transform: none;
+    margin-top: 20px;
+    letter-spacing: 0em;
+
+    
+}
+h3{
+    font-family: adonis-web;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.4;
+  
+}
+/* h2{
+    font-family: adonis-web;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+    margin-bottom: 20px;
+    
+}
+
+
+h4 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: adonis-web;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-transform: none;
+} */
+/* ul>li>a{
+    color: #fff;
+} */
+
+/* .logo img{
+    width: 50%;
+}  */
+
+.page-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    background-color: rgb(75, 75, 75);
+    color: #fff;
+
+}
+.navigation #menu{
+    display: none;
+}
+.menu{
+    display: flex;
+}
+.filter-options{
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+#filter{
+    display: none;
+}
+.icon{
+    color: #fff;
+padding: 10px;
+}
+.iconfilter{
+    color: #5aafd7;
+    border: 1px solid;
+padding: 10px;
+}
+
+
+   
+
+.menu a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.logo{
+    grid-row: 1;
+    grid-column: 1;
+    width: 80px;
+}
+.nav-toggle{
+    grid-row: 1;
+    grid-column: 4;
+}
+.search{
+    grid-row: 1 / 5;
+}
+.navigation{
+    grid-row: 3 / spen 4;
+    
+}
+
+.your-products{
+    grid-row: 1;
+    grid-column: 3;
+}
+.filter-list{
+    display: flex;
+}
+.rating {
+    display: block;
+    color: goldenrod;
+}
+.products, .page-header, .page-footer{
+    padding: 0px 10px 0px 10px ;
+}
+.your-products{
+    display: flex;
+}
+
+.pagination{
+    text-align: center;
+}
+.pages{
+    display: flex;
+    justify-content: center;
+}
+.pages > li{
+    margin: 4px;
+}
+
+.social, .legal{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5xp;
+}
+.copyright{
+    text-align: center;
+}
+
+/* product design */
+.product img{
+    border-radius: 30px 30px 0px 0px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.product data{
+  padding: 0 30px 0 30px ;
+
+}
+.product{
+    background-color: #fff;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    }
+.product header {
+    padding: 0px 30px 0 30px;
+}
+.form{
+    padding: 0px 30px 0 30px;
+}
+.bottons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(170, 169, 169);
+}
+.bottons li {
+    text-align: center;
+    list-style: none;
+}
+.bottons li i{
+  color: #cecece;
+}
+.bottons li i:hover{
+    color: #fff;
+}
+.variation ul li{
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0 10px 0 10px;
+}
+.variationfilter ul li{
+    display: block;
+    flex-wrap: wrap;
+    padding: 0 10px 0 10px;
+}
+.show {
+    margin-top: 10px;
+}
+ins{
+    color: red;
+    font-size: 1.5em;   
+}
+.product p{
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+font-size: 0.8em;
+line-height: 1rem;
+}
+#rating{
+    color: goldenrod;
+}
+dt{
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+
+/* footer */
+
+.page-footer{
+    background-color: #000;
+    color: #fff;
+}
+
+.social li i{
+    color: #fff;
+    align-items: center;
+    font-size: 30px;
+
+}
