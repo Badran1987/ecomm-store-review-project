@@ -1,8 +1,21 @@
 /* Note there a few "reset" styles given in reset.css. Review those before you begin */
+
+:root{
+    --primary-col: #971032;    /* main colour */
+	--primary-alt: #472d36;    /* variant */
+	--primary-on: #ffffff;     /* for text or icons */
+	--secondary-col: #3399ff;
+	--secondary-alt: #99ccff;
+    --secondary-on: #000000;
+    --rating: rgb(218, 165, 32);
+    --pad-and-gap: 1em;
+}
+
 h1 {
     font-family: adonis-web;
     font-weight: 400;
     font-size:  2rem;
+   
     padding-bottom: 20px;
     line-height: 2rem;
     text-align: center;
@@ -24,68 +37,86 @@ h3{
     line-height: 1.4;
   
 }
-/* h2{
+ h2{
     font-family: adonis-web;
-    font-size: 1.7rem;
-    font-weight: 400;
+    font-size: 1.2rem;
+    font-weight: 200;
     font-style: normal;
     letter-spacing: 0em;
     text-transform: none;
-    margin-bottom: 20px;
+ 
     
 }
-
-
-h4 {
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: adonis-web;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0em;
-    text-transform: none;
-} */
-/* ul>li>a{
-    color: #fff;
-} */
-
-/* .logo img{
-    width: 50%;
-}  */
 
 .page-header {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
-    background-color: rgb(75, 75, 75);
-    color: #fff;
+    background-color: var(--primary-col);
+    color: var(--primary-on);
 
 }
 .navigation #menu{
     display: none;
 }
 .menu{
-    display: flex;
+    
+    position: relative;
+    display: inline-block;
 }
+.menu:hover .submenu{
+    display: block;
+}
+.menubtn{
+
+    color: rgb(8, 8, 8);
+    padding: 1px;
+    font-size: 16px;
+    border: none;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.submenu a{
+    color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.submenu a:hover{
+    background-color: #4b4b4b;
+}
+
 .filter-options{
     display: block;
-    background-color: #fff;
+    background-color:var(--primary-on);
     border-radius: 10px;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px 0px 0px 0px;
 }
 #filter{
     display: none;
 }
 .icon{
-    color: #fff;
+    color: var(--primary-on);
 padding: 10px;
 }
 .iconfilter{
-    color: #5aafd7;
+    color: var(--secondary-col);
     border: 1px solid;
-padding: 10px;
+    padding: 3px;
+    margin-left: 20px;
+    font-size: 0.7em;
 }
-
+#sort {
+    width: 79%;
+    padding-left: 10px;
+    margin-left: 10px;
+}
 
    
 
@@ -115,13 +146,14 @@ padding: 10px;
 .your-products{
     grid-row: 1;
     grid-column: 3;
+    margin-top: 10px;
 }
 .filter-list{
     display: flex;
 }
 .rating {
     display: block;
-    color: goldenrod;
+    color: var(--rating);
 }
 .products, .page-header, .page-footer{
     padding: 0px 10px 0px 10px ;
@@ -160,7 +192,7 @@ padding: 10px;
 
 }
 .product{
-    background-color: #fff;
+    background-color: var(--primary-on);
     border-radius: 30px;
     margin-bottom: 30px;
     }
@@ -173,22 +205,22 @@ padding: 10px;
 .bottons{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: rgb(170, 169, 169);
+    background-color: var(--primary-col);
 }
 .bottons li {
     text-align: center;
     list-style: none;
 }
 .bottons li i{
-  color: #cecece;
+  color: var(--primary-on);
 }
 .bottons li i:hover{
-    color: #fff;
+    color: #e2e2e2;
 }
 .variation ul li{
     display: inline-flex;
     flex-wrap: wrap;
-    padding: 0 10px 0 10px;
+    padding: 0 0px 0 10px;
 }
 .variationfilter ul li{
     display: block;
@@ -197,9 +229,13 @@ padding: 10px;
 }
 .show {
     margin-top: 10px;
+    font-size: 0.8em;
+    margin-left: 10px;
+    display: inline-flex;
+    width: 70%;
 }
 ins{
-    color: red;
+    color:var(--primary-col);
     font-size: 1.5em;   
 }
 .product p{
@@ -209,7 +245,7 @@ font-size: 0.8em;
 line-height: 1rem;
 }
 #rating{
-    color: goldenrod;
+    color: var(--rating);
 }
 dt{
     font-size: 0.8em;
@@ -220,13 +256,58 @@ dt{
 /* footer */
 
 .page-footer{
-    background-color: #000;
-    color: #fff;
+    background-color:var(--secondary-on);
+    color: var(--primary-on);
 }
 
 .social li i{
-    color: #fff;
+    color: var(--primary-on);
     align-items: center;
     font-size: 30px;
 
 }
+    /* default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+    /* @media only screen and (min-width: 960px) {
+        /* styles for browsers larger than 960px; */
+     
+    @media only screen and (min-width: 1440px) {
+        /* styles for browsers larger than 1440px; */
+     
+    }
+    @media only screen and (min-width: 2000px) {
+        /* for sumo sized (mac) screens */
+    }
+    @media only screen and (max-device-width: 480px) {
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+    }
+    @media only screen and (device-width: 768px) {
+       /* default iPad screens */
+    }
+   
+    /* different techniques for iPad screening */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+      /* For portrait layouts only */
+      .products{
+        display: grid;
+        grid-template-columns: 100% auto;
+        column-gap: var(--pad-and-gap);
+         }
+
+      .heading, .pagination, .filters {
+         grid-column: 1 / span 2;
+         
+    }
+    .results{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--pad-and-gap);
+    }
+    h2{
+        display: none;
+    }
+}
+    
+
+    

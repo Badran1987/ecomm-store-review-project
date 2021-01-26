@@ -34,9 +34,9 @@ ul, ol, dl {
 	padding: 0;
 } 
 
-li > ul, li > ol {
+/* li > ul, li > ol {
 	padding-left: 2.5em;
-} 
+}  */
 
 input, button {
 	margin: 0;
