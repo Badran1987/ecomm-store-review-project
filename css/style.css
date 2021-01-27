@@ -9,45 +9,10 @@
     --secondary-on: #000000;
     --rating: rgb(218, 165, 32);
     --pad-and-gap: 1em;
+    --back-gradian: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(228,228,228,1) 0%, rgba(255,255,255,1) 100%); 
 }
 
-h1 {
-    font-family: adonis-web;
-    font-weight: 400;
-    font-size:  2rem;
-   
-    padding-bottom: 20px;
-    line-height: 2rem;
-    text-align: center;
-    font-style: normal;
-    text-transform: none;
-    margin-top: 20px;
-    letter-spacing: 0em;
-
-    
-}
-h3{
-    font-family: adonis-web;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0em;
-    text-transform: none;
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 1.4;
-  
-}
- h2{
-    font-family: adonis-web;
-    font-size: 1.2rem;
-    font-weight: 200;
-    font-style: normal;
-    letter-spacing: 0em;
-    text-transform: none;
- 
-    
-}
-
+/* Header style */
 .page-header {
     display: grid;
     grid-template-columns: auto 1fr auto auto;
@@ -55,6 +20,26 @@ h3{
     color: var(--primary-on);
 
 }
+header  a{
+    color: var(--primary-col);
+    text-decoration: none;
+}
+
+#find {
+    width: 70%;
+    margin-top: 15px;
+    border-radius: 11px;
+    margin-left: 19px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.menu a {
+    color: white;
+    
+    text-decoration: none;
+    font-size: 17px;
+}
+
 .navigation #menu{
     display: none;
 }
@@ -63,16 +48,12 @@ h3{
     position: relative;
     display: inline-block;
 }
-.menu:hover .submenu{
-    display: block;
-}
-.menubtn{
 
-    color: rgb(8, 8, 8);
-    padding: 1px;
-    font-size: 16px;
-    border: none;
+
+.menu:hover .submenu{
+    display: contents;
 }
+
 .submenu{
     display: none;
     position: absolute;
@@ -81,16 +62,8 @@ h3{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.submenu a{
-    color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-.submenu a:hover{
-    background-color: #4b4b4b;
-}
 
+/* Filter style */
 .filter-options{
     display: block;
     background-color:var(--primary-on);
@@ -103,7 +76,8 @@ h3{
 }
 .icon{
     color: var(--primary-on);
-padding: 10px;
+
+padding-top: 18px;
 }
 .iconfilter{
     color: var(--secondary-col);
@@ -120,36 +94,43 @@ padding: 10px;
 
    
 
-.menu a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
+
 .logo{
-    grid-row: 1;
     grid-column: 1;
-    width: 80px;
+    grid-row:1;
+}
+.logo img{
+    width: 50px;
 }
 .nav-toggle{
-    grid-row: 1;
     grid-column: 4;
+    grid-row:1;
 }
+
 .search{
-    grid-row: 1 / 5;
+    grid-row: 1 / span 4;
 }
 .navigation{
     grid-row: 3 / spen 4;
     
 }
-
+/* Solid border */
+hr.solid {
+    border-top: 0.5px solid #bbb;
+  }
 .your-products{
     grid-row: 1;
     grid-column: 3;
     margin-top: 10px;
+    position: absolute;
+top: 10px;
+right: 46px;
 }
 .filter-list{
     display: flex;
+}
+.hedin{
+    display: none;
 }
 .rating {
     display: block;
@@ -175,8 +156,12 @@ padding: 10px;
 
 .social, .legal{
     display: flex;
-    justify-content: flex-end;
-    margin: 5xp;
+    justify-content: center;
+    margin-top: 5xp;
+}
+.legal li a {
+color: var(--primary-on);
+padding-left: 20px;
 }
 .copyright{
     text-align: center;
@@ -187,14 +172,12 @@ padding: 10px;
     border-radius: 30px 30px 0px 0px;
     border-bottom: 1px solid #e3e3e3;
 }
-.product data{
-  padding: 0 30px 0 30px ;
 
-}
 .product{
     background-color: var(--primary-on);
     border-radius: 30px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 .product header {
     padding: 0px 30px 0 30px;
@@ -202,10 +185,19 @@ padding: 10px;
 .form{
     padding: 0px 30px 0 30px;
 }
+del {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+}
+legend{
+    color: var(--primary-col);
+}
 .bottons{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--primary-col);
+    border-radius: 0px 0 30px 30px;
 }
 .bottons li {
     text-align: center;
@@ -237,12 +229,16 @@ padding: 10px;
 ins{
     color:var(--primary-col);
     font-size: 1.5em;   
+    display: block;
+    text-align: center;
 }
 .product p{
     text-align: center;
     padding: 10px 20px 10px 20px;
 font-size: 0.8em;
 line-height: 1rem;
+overflow: hidden;
+height: 8.5em;
 }
 #rating{
     color: var(--rating);
@@ -254,16 +250,29 @@ dt{
 
 
 /* footer */
+.pages li {
+    background: var(--primary-col);
+    border-radius: 11px;
+    width: 35px;
+    border: 1px solid #ddd;
+    color: #fff;
+}
+.pages li a {
 
+    color: #fff;
+}
 .page-footer{
-    background-color:var(--secondary-on);
+    background-color:var(--primary-col);
     color: var(--primary-on);
 }
-
+.social{
+    padding-top: 10px;
+}
 .social li i{
     color: var(--primary-on);
     align-items: center;
     font-size: 30px;
+    padding-left:10px ;
 
 }
     /* default styles here for older browsers. 
@@ -303,6 +312,12 @@ dt{
         .your-products{
             grid-row: 1 ;
             grid-column: 5;
+            position: fixed;
+            top: 10px;
+            right: 46px;
+        }
+        .your-products  i {
+            color: var(--primary-on);
         }
         .menu{
             display: flex;
@@ -333,18 +348,24 @@ dt{
       /* For portrait layouts only */
       .products{
         display: grid;
-        grid-template-columns: 100% auto;
+        grid-template-columns: 49em auto;
         column-gap: var(--pad-and-gap);
          }
-
+         
       .heading, .pagination, .filters {
          grid-column: 1 / span 2;
          
+    }
+    .filters {
+    grid-column: 1 / span 2;
+    margin-left: 32px;
+    margin-bottom: 14px;
     }
     .results{
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: var(--pad-and-gap);
+        margin-left: 50px;
     }
     h2{
         display: none;
